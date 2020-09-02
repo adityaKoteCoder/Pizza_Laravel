@@ -19,7 +19,9 @@
                 <img src="/img/pizza-house.png" alt="pizza_house_Logo">
                 <div class="title m-b-md">
                     Pizza House The Best Pizza
-                </div>    
+                </div>
+                <p class="mssg">{{session('mssg')}}</p>
+                <a href="/pizzas/create">Order A Pizza</a>
                 </div>
             </div>
         </div>
