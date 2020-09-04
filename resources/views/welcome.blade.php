@@ -21,7 +21,7 @@
                     Pizza House The Best Pizza
                 </div>
                 <p class="mssg">{{session('mssg')}}</p>
-                <a href="/pizzas/create">Order A Pizza</a>
+                <a href={{route('pizzas.create')}}>Order A Pizza</a>
                 </div>
             </div>
         </div>
