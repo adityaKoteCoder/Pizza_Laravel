@@ -17,18 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/orders/pizzas', 'PizzaController@index')->name('pizzas.index')->middleware('auth');
-Route::get('/orders/pizzas/create', 'PizzaController@create')->name('pizzas.create');
+Route::get('/pizzas', 'PizzaController@index')->name('pizzas.index')->middleware('auth');
+Route::get('/pizzas/create', 'PizzaController@create')->name('pizzas.create');
 Route::post('/pizzas', 'PizzaController@store')->name('pizzas.store');
 Route::get('/pizzas/{id}', 'PizzaController@show')->name('pizzas.show')->middleware('auth');
-Route::delete('pizzas/{id}','PizzaController@destroy')->name('pizzas.destroy')->middleware('auth');
+Route::delete('/pizzas/{id}', 'pizzaController@destroy')->name('pizzas.destroy')->middleware('auth');
 
-
-
+    
 
 
 Auth::routes([
-    'register' => false
+    // 'register' => false
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
